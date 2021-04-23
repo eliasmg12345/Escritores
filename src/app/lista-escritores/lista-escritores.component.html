@@ -1,0 +1,8 @@
+<!-- A9 -->
+<div class="escritores">
+    <div class="escritor" *ngFor="let esc of arrEscritores">
+        <h3>{{esc.nombre}} {{esc.apellidos}}</h3>
+        <img [src]="esc.imagen" alt="">
+        <p>{{esc.pais}}</p>
+    </div>
+</div>
