@@ -3,3 +3,9 @@
 <h2>{{escritor?.nombre}} {{escritor?.apellidos}}</h2>
 <img [src]="escritor?.imagen" alt="">
 <p>{{escritor?.pais}}</p>
+
+<!-- C6 le ponemos un  router-outlet 
+ahora para crear y visualizar la lista de libros 
+PASO 1 nos vamos a inyectar al  ts de listalibros D1 
+-->
+<router-outlet></router-outlet>

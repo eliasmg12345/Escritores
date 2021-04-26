@@ -1,0 +1,8 @@
+
+<!-- D4 listando y dando estilos en css -->
+<div class="libros">
+    <div class="libro" *ngFor="let lib of libros">
+        <img [src]="lib.imagen">
+        <p>{{lib.titulo}}</p>
+    </div>
+</div>
