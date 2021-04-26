@@ -1,6 +1,22 @@
-<!-- A9 -->
+
+
+<!-- A14 filtrando en funcion de los valores ...lo aremos con el metodo change que 
+tienen los selectores que me indican cuando cambian los desplegables  y luego
+yo puedo pasarselo al servicio para que filre los escritores al ts A15  -->
+<select (change)="onChange($event)">
+    <option value="todos">TOdos</option>
+    <option value="españa">Espana</option>
+    <option value="reino unido">Reino Unido</option>
+    <option value="chile">Chiile</option>
+    <option value="canadá">Canada</option>
+</select>
+
+
+
+
+<!-- A9 luego aremos algunas modificaciones con el servicio => escritores.service A10-->
 <div class="escritores">
-    <div class="escritor" *ngFor="let esc of arrEscritores">
+    <div class="escritor" *ngFor="let esc of arrEscritores" [routerLink]="['/escritores',esc.id]">
         <h3>{{esc.nombre}} {{esc.apellidos}}</h3>
         <img [src]="esc.imagen" alt="">
         <p>{{esc.pais}}</p>
